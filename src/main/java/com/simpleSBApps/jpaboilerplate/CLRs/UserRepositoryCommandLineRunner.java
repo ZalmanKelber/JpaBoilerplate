@@ -8,9 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import static com.simpleSBApps.jpaboilerplate.entities.ApplicationUserRole.*;
+
 import java.util.Arrays;
 import java.util.List;
-import java.util.UUID;
 
 @Component
 public class UserRepositoryCommandLineRunner implements CommandLineRunner {
@@ -23,10 +24,10 @@ public class UserRepositoryCommandLineRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        User user1 = new User("Erste Magd", "USER");
-        User user2 = new User("Zweite Magd", "USER");
-        User user3 = new User("Dritte Magd", "USER");
-        User user4 = new User("Aufseherin", "ADMIN");
+        User user1 = new User("Erste Magd", USER);
+        User user2 = new User("Zweite Magd", USER);
+        User user3 = new User("Dritte Magd", USER);
+        User user4 = new User("Aufseherin", ADMIN);
         List<User> users = Arrays.asList(user1, user2, user3, user4);
         for (int i = 0; i < users.size(); i++) {
             User user = users.get(i);

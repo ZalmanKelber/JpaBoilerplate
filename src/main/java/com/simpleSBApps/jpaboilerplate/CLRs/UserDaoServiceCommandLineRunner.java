@@ -1,5 +1,6 @@
 package com.simpleSBApps.jpaboilerplate.CLRs;
 
+import static com.simpleSBApps.jpaboilerplate.entities.ApplicationUserRole.*;
 import com.simpleSBApps.jpaboilerplate.entities.User;
 import com.simpleSBApps.jpaboilerplate.services.UserDaoService;
 import org.slf4j.Logger;
@@ -23,10 +24,10 @@ public class UserDaoServiceCommandLineRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        User user1 = new User("Elektra", "USER");
-        User user2 = new User("Orest", "USER");
-        User user3 = new User("Chrysothemis", "USER");
-        User user4 = new User("Klytemnestra", "ADMIN");
+        User user1 = new User("Elektra", USER);
+        User user2 = new User("Orest", USER);
+        User user3 = new User("Chrysothemis", USER);
+        User user4 = new User("Klytemnestra", ADMIN);
         List<User> users = Arrays.asList(user1, user2, user3, user4);
         for (int i = 0; i < users.size(); i++) {
             User user = users.get(i);

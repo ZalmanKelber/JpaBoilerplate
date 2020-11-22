@@ -13,11 +13,11 @@ public class User {
     private UUID id;
 
     private String username;
-    private String role;
+    private ApplicationUserRole role;
 
     protected User() { }
 
-    public User(String username, String role) {
+    public User(String username, ApplicationUserRole role) {
         super();
         this.username = username;
         this.role = role;
@@ -31,7 +31,7 @@ public class User {
         return username;
     }
 
-    public String getRole() {
+    public ApplicationUserRole getRole() {
         return role;
     }
 
